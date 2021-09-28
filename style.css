@@ -1,0 +1,237 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;700&display=swap');
+
+:root {
+  --primary-color: #00acbf;
+  --secondary-color: #e5e5e5;
+  --third-color: #1f252d;
+}
+
+/* 
+================
+General Styles
+================
+*/
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--secondary-color);
+  transition: 0.3s ease-out;
+  min-height: 200vh;
+}
+
+header {
+  min-height: 100vh;
+}
+
+p {
+  color: var(--third-color);
+  font-size: 1.6rem;
+}
+
+h1 {
+  font-size: 3.6rem;
+}
+
+h3 {
+  font-size: 2.4rem;
+  font-weight: 400;
+  color: var(--third-color);
+}
+
+/* 
+================
+Custom Styles
+================
+*/
+
+body.dark {
+  --secondary-color: #1f252d;
+  --third-color: #e5e5e5;
+
+  transition: 0.3s ease-out;
+}
+
+/*
+-----------------------------
+Navigation Bar
+-----------------------------
+*/
+
+.nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 8rem;
+  border-bottom: 1px solid var(--third-color);
+  transition: 0.3s ease-out;
+  /* transform: translateZ(0); */
+}
+
+.nav ul {
+  background-color: var(--primary-color);
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: space-around;
+  /* height: inherit; */
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+
+.nav ul li {
+  list-style-type: none;
+}
+
+.nav ul li a {
+  text-decoration: none;
+  padding: 1rem;
+  display: block;
+  transition: 0.2s;
+  color: #e5e5e5;
+  font-size: 1.6rem;
+}
+
+.logo {
+  font-size: 3.6rem;
+  text-decoration: none;
+  color: var(--primary-color);
+}
+
+.btn {
+  padding: 1rem;
+  border-radius: 1rem;
+  border: none;
+  margin: 1rem;
+  cursor: pointer;
+  background-color: var(--third-color);
+  color: var(--secondary-color);
+  transition: 0.3s;
+}
+
+.btn i {
+  font-size: 2rem;
+}
+
+/*
+-----------------------------
+Hero Section
+-----------------------------
+*/
+
+.hero {
+  min-height: calc(100vh - 16rem);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  gap: 2rem;
+}
+
+.hero div {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  text-align: center;
+}
+
+.hero h2 {
+  color: var(--third-color);
+  font-size: 3.6rem;
+}
+
+.btn.cta {
+  background-color: var(--primary-color);
+  color: #e5e5e5;
+  width: 10rem;
+  margin: 0 auto;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.hero .btn.cta:active {
+  transform: scale(0.98);
+}
+
+/*
+-----------------------------
+Main Section
+-----------------------------
+*/
+
+.about {
+  height: calc(100vh - 8rem);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--third-color);
+}
+
+/*
+================
+Media Queries
+================
+*/
+
+@media (min-width: 768px) {
+  .nav {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    justify-content: space-between;
+    background-color: var(--secondary-color);
+  }
+  .nav ul {
+    position: relative;
+    background-color: transparent;
+    gap: 3rem;
+  }
+
+  .nav ul li:hover a {
+    color: var(--primary-color);
+    transform: translateY(-1rem);
+    transition: transform 0.2s;
+  }
+
+  .nav ul li a {
+    color: var(--third-color);
+  }
+
+  .hero {
+    margin-top: 8rem;
+  }
+
+  .btn.cta {
+    background-color: var(--primary-color);
+    color: #e5e5e5;
+  }
+
+  .btn i {
+    color: var(--primary-color);
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero {
+    min-height: calc(100vh - 8rem);
+  }
+}
