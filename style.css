@@ -307,7 +307,7 @@ Main Section
   align-items: center;
   width: 35rem;
   padding: 2rem;
-  margin: 2rem;
+  margin: 1rem;
 }
 
 .skills .card img {
@@ -455,10 +455,6 @@ Media Queries
     min-width: 100%;
     flex-wrap: wrap;
     gap: 2.5rem;
-  }
-
-  .skills .card {
-    margin: 0;
   }
 
   .project-card {
