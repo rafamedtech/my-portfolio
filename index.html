@@ -10,12 +10,12 @@
   </head>
   <body>
     <header>
+      <div>
+        <a class="logo" href="/">MyPortfolio</a>
+      </div>
+
       <!-- Navigation Bar -->
       <nav class="nav">
-        <div>
-          <a class="logo" href="/">MyPortfolio</a>
-        </div>
-
         <ul>
           <li><a href="/index.html">Projects</a></li>
           <li><a href="/index.html">Blog</a></li>
@@ -25,27 +25,113 @@
           </li>
         </ul>
       </nav>
-
-      <section class="hero">
-        <img src="img/Hero.svg" alt="" />
-        <div>
-          <h2>I'm Rafael Valenzuela</h2>
-          <h3>Fullstack Web Developer</h3>
-          <button class="btn cta">Contact me!</button>
-        </div>
-      </section>
     </header>
+
+    <section class="hero">
+      <figure class="blob">
+        <img src="img/Hero.svg" alt="" />
+      </figure>
+      <div>
+        <h2>I'm Rafael Valenzuela</h2>
+        <h3>Fullstack Web Developer</h3>
+        <button class="btn cta"><a href="">Contact me!</a></button>
+      </div>
+    </section>
 
     <!-- Main content  -->
     <main>
-      <section class="about">
-        <h2>Few words about me</h2>
+      <section class="about neumorphism">
+        <h2 class="headings">Few words about me</h2>
         <p>
           Technology is my passion, I love creating websites and Web Apps and I also enjoy share
           what I just learned with everyone.
         </p>
       </section>
+
+      <section class="skills">
+        <article>
+          <h2 class="headings">What I do</h2>
+          <p>
+            I would love to use my skills to help your project. My expertise spans from brocure
+            websites to fully functional aplications.
+          </p>
+        </article>
+
+        <div>
+          <article class="card neumorphism">
+            <h3>UI/UX Design</h3>
+            <div class="blob">
+              <img src="img/uxui.svg" alt="" />
+            </div>
+            <p>Web designs ready to be coded</p>
+          </article>
+
+          <article class="card neumorphism">
+            <h3>Web Development</h3>
+            <div class="blob">
+              <img src="img/dev.svg" alt="" />
+            </div>
+            <p>From design to code or get your design and create the project.</p>
+          </article>
+
+          <article class="card neumorphism">
+            <h3>Search Engine Optimization</h3>
+            <div class="blob">
+              <img src="img/seo.svg" alt="" />
+            </div>
+            <p>All the basic SEO practices to be reached organically</p>
+          </article>
+        </div>
+      </section>
+
+      <section class="projects">
+        <h2 class="headings">Here are some samples</h2>
+        <div>
+          <article class="neumorphism project-card">
+            <img src="img/render.jpg" alt="Render" />
+          </article>
+          <article class="neumorphism project-card">
+            <img src="img/daguilar.jpg" alt="DAguilar" />
+          </article>
+          <article class="neumorphism project-card">
+            <img src="img/topgarage.jpg" alt="Top Garage" />
+          </article>
+        </div>
+        <div class="project-links">
+          <a href="projects.html">See more...</a>
+          <button class="btn cta"><a href="contact.html">Start a project</a></button>
+        </div>
+      </section>
+
+      <section class="contact">
+        <h2 class="headings">Let’s work together!</h2>
+        <article class="contact-content">
+          <figure class="blob"><img src="img/contact.svg" alt="" /></figure>
+
+          <form class="neumorphism">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" />
+            <label for="email">Email</label>
+            <input type="email" id="email" />
+            <label for="message">Your Message</label>
+            <textarea id="message"></textarea>
+
+            <input class="btn cta" type="submit" value="Submit" />
+          </form>
+        </article>
+      </section>
     </main>
+
+    <footer>
+      <section>
+        <a href="https://twitter.com/rafamedDev" target="_blank"><i class="fab fa-twitter"></i></a>
+        <a href="https://github.com/rafamedtech/" target="_blank"><i class="fab fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/rafael-amed-valenzuela/" target="_blank"
+          ><i class="fab fa-linkedin"></i
+        ></a>
+      </section>
+      <p>Copyright &copy; Rafamed</p>
+    </footer>
     <script src="script.js"></script>
   </body>
 </html>
