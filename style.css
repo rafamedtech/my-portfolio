@@ -38,7 +38,7 @@ html {
 }
 
 body {
-  min-height: 200vh;
+  /* min-height: 200vh; */
   font-family: 'Poppins', sans-serif;
   background-color: var(--secondary-color);
   transition: 0.3s ease-out;
@@ -156,6 +156,10 @@ Reusable styles
 
 .btn.cta:active {
   transform: scale(0.98);
+}
+
+.btn.cta.form {
+  width: 100%;
 }
 
 .blob {
@@ -290,12 +294,15 @@ Main Section
 }
 
 .skills article:first-child p {
-  max-width: 40rem;
-  text-align: center;
+  max-width: 80%;
+  margin: 0 auto;
   margin-bottom: 2rem;
+  text-align: center;
 }
 
 .skills div {
+  display: flex;
+  flex-wrap: wrap;
   gap: 2rem;
 }
 
@@ -307,7 +314,10 @@ Main Section
   align-items: center;
   width: 35rem;
   padding: 2rem;
-  margin: 1rem;
+}
+
+.skills .card .blob {
+  height: 25rem;
 }
 
 .skills .card img {
@@ -413,6 +423,68 @@ footer i {
 
 /*
 ================
+Projects page  styles
+================
+*/
+
+.projects-main {
+  margin-top: 4rem;
+}
+
+.projects-main h2 {
+  font-weight: 400;
+  text-align: center;
+  color: var(--third-color);
+}
+
+.projects-main p {
+  text-align: center;
+  padding: 2rem;
+  color: var(--primary-color);
+}
+
+.projects-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 4rem;
+}
+
+.projects-container .project {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 35rem;
+}
+
+.projects-container .project img {
+  width: 100%;
+  border-radius: 1rem;
+}
+
+.project-btns {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+}
+
+.tags-container {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.tags-container .tag {
+  padding: 1rem;
+  border: 1px solid var(--primary-color);
+  border-radius: 1.5rem;
+  color: var(--third-color);
+}
+
+/*
+================
 Media Queries
 ================
 */
@@ -471,6 +543,15 @@ Media Queries
     margin-bottom: 1rem;
   }
 
+  .projects-main {
+    margin-top: 10rem;
+  }
+
+  .projects-main .projects-description {
+    max-width: 50rem;
+    margin: 0 auto;
+  }
+
   .btn.cta {
     background-color: var(--primary-color);
     color: #e5e5e5;
@@ -512,7 +593,17 @@ Media Queries
     transition: 0.3s;
   }
 
+  .projects-main h2 {
+    margin-left: 2rem;
+    text-align: left;
+  }
+
+  .projects-main .projects-description {
+    margin: 0;
+    text-align: left;
+  }
+
   .btn.cta {
-    margin: 0 auto;
+    margin: 0;
   }
 }
