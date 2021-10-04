@@ -13,11 +13,13 @@ let darkMode = localStorage.getItem('darkMode');
 const enableDarkMode = () => {
   document.body.classList.add('dark');
   localStorage.setItem('darkMode', 'enabled');
+  darkModeBtn.innerHTML = '<i class="fas fa-sun"></i>';
 };
 
 const disableDarkMode = () => {
   document.body.classList.remove('dark');
   localStorage.setItem('darkMode', null);
+  darkModeBtn.innerHTML = '<i class="fas fa-moon"></i>';
 };
 
 if (darkMode === 'enabled') {
@@ -30,11 +32,5 @@ darkModeBtn.addEventListener('click', () => {
     enableDarkMode();
   } else {
     disableDarkMode();
-  }
-
-  if (document.body.classList.contains('dark') && darkMode === 'enabled') {
-    darkModeBtn.innerHTML = '<i class="fas fa-sun"></i>';
-  } else {
-    darkModeBtn.innerHTML = '<i class="fas fa-moon"></i>';
   }
 });
