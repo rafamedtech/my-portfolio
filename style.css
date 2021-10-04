@@ -741,7 +741,7 @@ Media Queries
   }
 }
 
-/* @media (prefers-color-scheme: dark) {
+@media (prefers-color-scheme: dark) {
   :root {
     --secondary-color: #1f252d;
     --third-color: #e5e5e5;
@@ -749,4 +749,4 @@ Media Queries
     --shadow-up: #1a1f26;
     --shadow-down: #242b34;
   }
-} */
+}
