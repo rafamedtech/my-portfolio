@@ -136,10 +136,10 @@ Reusable styles
 }
 
 .btn {
-  margin: 1rem;
-  padding: 1rem;
+  /* margin: 1rem; */
+  padding: 0.5rem;
   border: none;
-  border-radius: 1rem;
+  border-radius: 0.5rem;
   font-size: 2rem;
   background-color: var(--third-color);
   color: var(--secondary-color);
@@ -743,7 +743,7 @@ Media Queries
   }
 }
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --secondary-color: #1f252d;
     --third-color: #e5e5e5;
@@ -764,4 +764,4 @@ Media Queries
     --shadow-up: #c3c3c3;
     --shadow-down: #ffffff;
   }
-}
+} */
