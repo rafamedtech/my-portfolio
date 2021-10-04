@@ -97,10 +97,13 @@ textarea {
 }
 
 input:focus,
-textarea:focus {
+textarea:focus,
+input:hover,
+textarea:hover {
   border-color: transparent;
   outline: 2px solid var(--primary-color);
   background-color: #fff;
+  transition: 0.1s;
 }
 
 main {
@@ -125,6 +128,11 @@ Reusable styles
   line-height: 1;
   color: var(--primary-color);
   padding: 1rem;
+}
+
+.current {
+  border-radius: 0;
+  border-bottom: 2px solid #e5e5e5;
 }
 
 .btn {
@@ -209,6 +217,7 @@ Navigation Bar
   align-items: center;
   gap: 1rem;
   position: fixed;
+  z-index: 1;
   bottom: 0;
   left: 0;
   right: 0;
@@ -372,7 +381,7 @@ Main Section
 
 /*
 -----------------------------
-Contact Section
+Contact Section & Page
 -----------------------------
 */
 
@@ -485,6 +494,74 @@ Projects page  styles
 
 /*
 ================
+Blog page  styles
+================
+*/
+
+.blog-main {
+  margin-top: 4rem;
+}
+
+.blog-main h2 {
+  font-weight: 400;
+  text-align: center;
+  color: var(--third-color);
+}
+
+.blog-main p {
+  text-align: center;
+  padding: 2rem;
+  color: var(--primary-color);
+}
+
+.posts-container {
+  display: grid;
+  position: relative;
+  gap: 3rem;
+  padding: 1.5rem;
+}
+
+.post {
+  position: relative;
+  width: 35rem;
+  margin: 0 auto;
+  margin-bottom: 2rem;
+  overflow: hidden;
+}
+
+.post img {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  height: 100%;
+  width: 100%;
+  filter: brightness(60%);
+  border-radius: 2rem;
+  transition: 0.3s;
+}
+
+.post h2 {
+  position: relative;
+  z-index: 1;
+  color: #e5e5e5;
+}
+
+.post p {
+  position: relative;
+  z-index: 1;
+}
+
+.post a {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  font-size: 1.6rem;
+  padding: 2rem;
+  color: #e5e5e5;
+}
+
+/*
+================
 Media Queries
 ================
 */
@@ -513,6 +590,13 @@ Media Queries
     transition: transform 0.2s;
   }
 
+  .nav ul li:hover a.current {
+    color: revert;
+    transform: revert;
+    cursor: unset;
+    color: #e5e5e5;
+  }
+
   .nav ul li a {
     color: var(--third-color);
   }
@@ -531,6 +615,10 @@ Media Queries
 
   .project-card {
     width: 50rem;
+  }
+
+  .contact.page {
+    margin-top: 16rem;
   }
 
   .contact-content {
@@ -552,6 +640,10 @@ Media Queries
     margin: 0 auto;
   }
 
+  .current {
+    border-bottom: 1px solid var(--primary-color);
+  }
+
   .btn.cta {
     background-color: var(--primary-color);
     color: #e5e5e5;
@@ -559,6 +651,19 @@ Media Queries
 
   .btn i {
     color: var(--primary-color);
+  }
+
+  .blog-main {
+    margin-top: 10rem;
+  }
+
+  .blog-main .blog-description {
+    max-width: 50rem;
+    margin: 0 auto;
+  }
+
+  .post {
+    width: 40rem;
   }
 }
 
@@ -603,7 +708,45 @@ Media Queries
     text-align: left;
   }
 
+  .blog-main h2 {
+    margin-left: 2rem;
+    text-align: left;
+  }
+
+  .blog-main .blog-description {
+    margin: 0;
+    text-align: left;
+  }
+
+  .posts-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .post:hover img {
+    transform: scale(1.1);
+    transition: 0.3s;
+  }
+
+  .contact-content .blob {
+    height: 50rem;
+    width: 50rem;
+  }
+
+  .contact-content .blob img {
+    width: 50rem;
+  }
+
   .btn.cta {
     margin: 0;
   }
 }
+
+/* @media (prefers-color-scheme: dark) {
+  :root {
+    --secondary-color: #1f252d;
+    --third-color: #e5e5e5;
+
+    --shadow-up: #1a1f26;
+    --shadow-down: #242b34;
+  }
+} */
