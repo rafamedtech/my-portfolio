@@ -38,7 +38,6 @@ html {
 }
 
 body {
-  /* min-height: 200vh; */
   font-family: 'Poppins', sans-serif;
   background-color: var(--secondary-color);
   transition: 0.3s ease-out;
@@ -133,6 +132,10 @@ Reusable styles
 .current {
   border-radius: 0;
   border-bottom: 2px solid var(--primary-color);
+}
+
+.button-item {
+  display: none;
 }
 
 .button-item .btn {
@@ -576,6 +579,7 @@ Media Queries
   header {
     justify-content: space-between;
     position: fixed;
+    z-index: 99;
     top: 0;
     left: 0;
     right: 0;
