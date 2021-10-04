@@ -4,6 +4,8 @@ const darkModeItem = document.querySelector('.button-item');
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
   darkModeItem.style.display = 'block';
   darkModeBtn.innerHTML = '<i class="fas fa-moon"></i>';
+} else {
+  darkModeBtn.innerHTML = '<i class="fas fa-sun"></i>';
 }
 
 let darkMode = localStorage.getItem('darkMode');
