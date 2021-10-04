@@ -132,7 +132,7 @@ Reusable styles
 
 .current {
   border-radius: 0;
-  border-bottom: 2px solid var(--secondary-color);
+  border-bottom: 2px solid var(--third-color);
 }
 
 .button-item .btn {
