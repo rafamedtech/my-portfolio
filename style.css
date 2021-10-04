@@ -646,6 +646,11 @@ Media Queries
     border-bottom: 1px solid var(--primary-color);
   }
 
+  .btn {
+    padding: 1rem;
+    border-radius: 1rem;
+  }
+
   .btn.cta {
     background-color: var(--primary-color);
     color: #e5e5e5;
