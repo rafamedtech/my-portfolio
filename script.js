@@ -3,6 +3,7 @@ const darkModeItem = document.querySelector('.button-item');
 
 if (window.matchMedia && window.matchMedia('(prefers-color-scheme: light)').matches) {
   darkModeItem.style.display = 'block';
+  darkModeBtn.innerHTML = '<i class="fas fa-sun"></i>';
 }
 
 let darkMode = localStorage.getItem('darkMode');
@@ -29,7 +30,7 @@ darkModeBtn.addEventListener('click', () => {
     disableDarkMode();
   }
 
-  if (document.body.classList.contains('dark')) {
+  if (document.body.classList.contains('dark') && darkMode === 'enabled') {
     darkModeBtn.innerHTML = '<i class="fas fa-sun"></i>';
   } else {
     darkModeBtn.innerHTML = '<i class="fas fa-moon"></i>';
