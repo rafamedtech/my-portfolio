@@ -222,7 +222,8 @@ Navigation Bar
   left: 0;
   right: 0;
   height: inherit;
-  background-color: var(--primary-color);
+  background-color: var(--secondary-color);
+  border-top: 1px solid var(--primary-color);
 }
 
 .nav ul li {
@@ -582,6 +583,7 @@ Media Queries
     position: relative;
     gap: 3rem;
     background-color: transparent;
+    border-top: none;
   }
 
   .nav ul li:hover a {
