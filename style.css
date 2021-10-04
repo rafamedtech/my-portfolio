@@ -597,7 +597,7 @@ Media Queries
 
   .nav ul li:hover a {
     color: var(--primary-color);
-    transform: translateY(-1rem);
+    transform: translateY(-0.5rem);
     transition: transform 0.2s;
   }
 
