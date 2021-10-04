@@ -750,3 +750,16 @@ Media Queries
     --shadow-down: #242b34;
   }
 }
+
+@media (prefers-color-scheme: light) {
+  :root {
+    /* Base Colors */
+    --primary-color: #00acbf;
+    --secondary-color: #e5e5e5;
+    --third-color: #1f252d;
+
+    /* Neumorphism Effect Colors*/
+    --shadow-up: #c3c3c3;
+    --shadow-down: #ffffff;
+  }
+}

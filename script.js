@@ -1,4 +1,9 @@
 const darkModeBtn = document.getElementById('btn');
+const darkModeItem = document.querySelector('.button-item');
+
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+  darkModeItem.style.display = 'none';
+}
 
 let darkMode = localStorage.getItem('darkMode');
 
