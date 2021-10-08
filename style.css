@@ -295,6 +295,10 @@ Main Section
   text-align: center;
 }
 
+.about img {
+  height: 16rem;
+}
+
 .skills {
   display: flex;
   flex-direction: column;
@@ -305,50 +309,48 @@ Main Section
   padding: 4rem 2rem;
 }
 
-.skills article:first-child {
+.skills .skills-description {
   display: flex;
   flex-direction: column;
   gap: 2rem;
 }
 
-.skills article:first-child p {
+.skills .skills-description p {
   max-width: 80%;
   margin: 0 auto;
   margin-bottom: 2rem;
   text-align: center;
 }
 
-.skills div {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 2rem;
-}
-
 .skills .card {
-  display: flex;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   justify-content: space-around;
-  gap: 2rem;
+  gap: 3rem;
   align-items: center;
   width: 35rem;
+  max-width: 50rem;
   padding: 2rem;
 }
 
-.skills .card .blob {
-  height: 25rem;
+.skills .card article {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  text-align: center;
 }
 
-.skills .card img {
-  height: 18rem;
+/* .skills div {
+  width: 50rem;
+} */
+
+.skills .card i {
+  font-size: 5rem;
+  color: var(--third-color);
 }
 
 .skills .card p {
-  width: 80%;
-  text-align: center;
-}
-
-.skills .card h3 {
-  text-align: center;
+  color: var(--primary-color);
 }
 
 .projects {
@@ -624,6 +626,10 @@ Media Queries
     gap: 2.5rem;
   }
 
+  .skills .card {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
   .project-card {
     width: 50rem;
   }
@@ -701,6 +707,8 @@ Media Queries
 
   .skills div {
     justify-content: space-around;
+    min-width: 60%;
+    height: 40rem;
   }
 
   footer {
