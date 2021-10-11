@@ -1,0 +1,150 @@
+/*
+1. Positioning
+2. Box model
+3. Font
+4. Visuals
+5. Other
+*/
+
+/* 
+================
+Custom Styles
+================
+*/
+
+/*
+-----------------------------
+Hero Section
+-----------------------------
+*/
+
+.hero {
+  flex-direction: row-reverse;
+  justify-content: space-around;
+  min-height: calc(100vh - 8rem);
+}
+
+.hero h2 {
+  font-size: 4.2rem;
+}
+
+.hero h3 {
+  font-size: 2.8rem;
+  text-align: left;
+}
+
+/*
+-----------------------------
+Main Section
+-----------------------------
+*/
+
+.skills div {
+  justify-content: space-around;
+  min-width: 60%;
+  height: 40rem;
+}
+
+footer {
+  flex-direction: row-reverse;
+  justify-content: space-around;
+}
+
+footer i:hover {
+  color: var(--primary-color);
+  transform: translateY(-5px);
+  transition: 0.3s;
+}
+
+/*
+================
+Projects page  styles
+================
+*/
+
+.projects-main h2 {
+  margin-left: 2rem;
+  text-align: left;
+}
+
+.projects-main .projects-description {
+  margin: 0;
+  text-align: left;
+}
+
+/*
+================
+Blog page  styles
+================
+*/
+
+.blog-main h2 {
+  margin-left: 2rem;
+  text-align: left;
+}
+
+.blog-main .blog-description {
+  margin: 0;
+  text-align: left;
+}
+
+.posts-container {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.post:hover img {
+  transform: scale(1.1);
+  transition: 0.3s;
+}
+
+/*
+================
+Post page  styles
+================
+*/
+
+.post-main img {
+  width: auto;
+  height: 40rem;
+  border-radius: 3rem;
+}
+
+.post-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60vw;
+  margin: 0 auto;
+}
+
+.post-content article > * {
+  margin: 3rem 1rem;
+}
+
+.post-content article div {
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.post-content article div img {
+  height: 30rem;
+}
+
+/*
+-----------------------------
+Contact Section & Page
+-----------------------------
+*/
+
+.contact-content .blob {
+  height: 40rem;
+  width: 40rem;
+}
+
+.contact-content .blob img {
+  width: 50rem;
+}
+
+.btn.cta {
+  margin: 0;
+}

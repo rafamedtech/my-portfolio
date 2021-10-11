@@ -1,0 +1,181 @@
+/*
+1. Positioning
+2. Box model
+3. Font
+4. Visuals
+5. Other
+*/
+
+/* 
+================
+Custom Styles
+================
+*/
+
+header {
+  justify-content: space-between;
+  position: fixed;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  background-color: var(--secondary-color);
+}
+
+/*
+-----------------------------
+Navigation Bar
+-----------------------------
+*/
+
+.nav ul {
+  position: relative;
+  gap: 3rem;
+  background-color: transparent;
+  border-top: none;
+}
+
+.nav ul li:hover a {
+  color: var(--primary-color);
+  transform: translateY(-0.5rem);
+  transition: transform 0.2s;
+}
+
+.nav ul li:hover a.current {
+  color: revert;
+  transform: revert;
+  cursor: unset;
+  color: #e5e5e5;
+}
+
+.nav ul li a {
+  color: var(--third-color);
+}
+
+/*
+-----------------------------
+Hero Section
+-----------------------------
+*/
+
+.hero {
+  margin-top: 8rem;
+}
+
+/*
+-----------------------------
+Main Section
+-----------------------------
+*/
+
+.skills div {
+  display: flex;
+  justify-content: center;
+  min-width: 100%;
+  flex-wrap: wrap;
+  gap: 2.5rem;
+}
+
+.skills .card {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.project-card {
+  width: 50rem;
+}
+
+/*
+-----------------------------
+Contact Section & Page
+-----------------------------
+*/
+
+.contact.page {
+  margin-top: 16rem;
+}
+
+.contact-content {
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+
+footer {
+  margin-bottom: 1rem;
+}
+
+/*
+================
+Projects page  styles
+================
+*/
+
+.projects-main {
+  margin-top: 10rem;
+}
+
+.projects-main .projects-description {
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+/*
+================
+Reusable styles
+================
+*/
+
+.current {
+  border-bottom: 1px solid var(--primary-color);
+}
+
+.button-item .btn {
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+.btn.cta {
+  background-color: var(--primary-color);
+  color: #e5e5e5;
+}
+
+.btn i {
+  color: var(--primary-color);
+}
+
+/*
+================
+Blog page  styles
+================
+*/
+
+.blog-main {
+  margin-top: 10rem;
+}
+
+.blog-main .blog-description {
+  max-width: 50rem;
+  margin: 0 auto;
+}
+
+.post {
+  width: 40rem;
+}
+
+/*
+================
+Post page  styles
+================
+*/
+
+.post-main {
+  margin-top: 16rem;
+}
+
+.post-content article div {
+  flex-direction: row;
+  align-items: center;
+  gap: 1rem;
+}

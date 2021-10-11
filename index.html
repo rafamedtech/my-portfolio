@@ -5,7 +5,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio website</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link rel="stylesheet" href="/css/dark.css" media="(prefers-color-scheme: dark)" />
+    <link rel="stylesheet" href="/css/tablet.css" media="(min-width: 768px)" />
+    <link rel="stylesheet" href="/css/desktop.css" media="(min-width: 1024px)" />
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css" />
     <link
       rel="stylesheet"
@@ -31,6 +34,7 @@
       </nav>
     </header>
 
+    <!-- Hero Section  -->
     <section class="hero">
       <figure class="blob">
         <img src="img/Hero.svg" alt="Hero image" />
@@ -38,7 +42,7 @@
       <div>
         <h2>I'm Rafael Valenzuela</h2>
         <h3>Fullstack Web Developer</h3>
-        <button class="btn cta"><a href="/contact.html">Contact me!</a></button>
+        <a class="btn cta" href="/contact.html">Contact me!</a>
       </div>
     </section>
 
@@ -55,10 +59,10 @@
 
       <section class="skills">
         <article class="skills-description">
-          <h2 class="headings">What I do</h2>
+          <h2 class="headings">The stack I do use</h2>
           <p>
-            I would love to use my skills to help your project. My expertise spans from brocure
-            websites to fully functional aplications.
+            Here are the technologies I use most of the time for my projects and I feel more
+            comfortable with.
           </p>
         </article>
 
@@ -87,32 +91,6 @@
             <i class="devicon-django-plain"></i>
             <p>Django</p>
           </article>
-          <!-- <i class="devicon-docker-plain"></i> -->
-          <!-- <i class="devicon-postgresql-plain"></i> -->
-
-          <!-- <article class="card neumorphism">
-            <h3>UI/UX Design</h3>
-            <div class="blob">
-              <img src="img/uxui.svg" alt="UI/UX Design" />
-            </div>
-            <p>Web designs ready to be coded.</p>
-          </article>
-
-          <article class="card neumorphism">
-            <h3>Web Development</h3>
-            <div class="blob">
-              <img src="img/dev.svg" alt="Web Development" />
-            </div>
-            <p>From design to code or get your design and create the project.</p>
-          </article>
-
-          <article class="card neumorphism">
-            <h3>Web and Mobile Apps</h3>
-            <div class="blob">
-              <img src="img/mobile.svg" alt="Mobile Apps" />
-            </div>
-            <p>Multiplatform mobile applications from scratch.</p>
-          </article> -->
         </div>
       </section>
 
@@ -131,7 +109,7 @@
         </div>
         <div class="project-links">
           <a href="projects.html">See more...</a>
-          <button class="btn cta"><a href="/contact.html">Start a project</a></button>
+          <a class="btn cta" href="/contact.html">Start a project</a>
         </div>
       </section>
 
