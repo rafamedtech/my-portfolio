@@ -11,13 +11,14 @@
     <link rel="stylesheet" href="/css/tablet.css" media="(min-width: 768px)" />
     <link rel="stylesheet" href="/css/desktop.css" media="(min-width: 1024px)" />
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.14.0/devicon.min.css"
     />
   </head>
   <body>
-    <header>
+    <header data-aos="fade-down">
       <div>
         <a class="logo" href="/">MyPortfolio</a>
       </div>
@@ -38,9 +39,9 @@
     <!-- Hero Section  -->
     <section class="hero">
       <figure class="blob">
-        <img src="img/Hero.svg" alt="Hero image" />
+        <img src="img/Hero.svg" alt="Hero image" data-aos="fade-left" />
       </figure>
-      <div>
+      <div data-aos="fade-right">
         <h2>I'm Rafael Valenzuela</h2>
         <h3>Fullstack Web Developer</h3>
         <a class="btn cta" href="/contact.html">Contact me!</a>
@@ -49,7 +50,7 @@
 
     <!-- Main content  -->
     <main>
-      <section class="about neumorphism">
+      <section class="about neumorphism" data-aos="fade-right">
         <h2 class="headings">Few words about me</h2>
         <p>
           Technology is my passion, I love creating websites and Web Apps and I also enjoy share
@@ -67,7 +68,7 @@
           </p>
         </article>
 
-        <div class="neumorphism card">
+        <div class="neumorphism card" data-aos="fade-left">
           <article>
             <i class="devicon-javascript-plain"></i>
             <p>Javascript</p>
@@ -97,7 +98,7 @@
 
       <section class="projects">
         <h2 class="headings">Here are some samples</h2>
-        <div>
+        <div data-aos="fade-in">
           <article class="neumorphism project-card">
             <img src="img/render.jpg" alt="Render" />
           </article>
@@ -117,9 +118,11 @@
       <section class="contact">
         <h2 class="headings">Let’s work together!</h2>
         <article class="contact-content">
-          <figure class="blob"><img src="img/contact.svg" alt="Contact image" /></figure>
+          <figure class="blob" data-aos="fade-right">
+            <img src="img/contact.svg" alt="Contact image" />
+          </figure>
 
-          <form class="neumorphism">
+          <form class="neumorphism" data-aos="fade-left">
             <label for="name">Full Name</label>
             <input type="text" id="name" />
             <label for="email">Email</label>
@@ -143,6 +146,13 @@
       </section>
       <p>Copyright &copy; Rafamed</p>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        offset: 350,
+        duration: 1000,
+      });
+    </script>
     <script src="script.js"></script>
   </body>
 </html>

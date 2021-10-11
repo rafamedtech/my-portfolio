@@ -4,16 +4,17 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio website</title>
+    <title>Portfolio website | Post Title</title>
     <link rel="shortcut icon" href="favicon.png" type="image/png" />
     <link rel="stylesheet" href="/css/main.css" />
     <link rel="stylesheet" href="/css/dark.css" media="(prefers-color-scheme: dark)" />
     <link rel="stylesheet" href="/css/tablet.css" media="(min-width: 768px)" />
     <link rel="stylesheet" href="/css/desktop.css" media="(min-width: 1024px)" />
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.0.7/css/all.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
-    <header>
+    <header data-aos="fade-down">
       <div>
         <a class="logo" href="/">MyPortfolio</a>
       </div>
@@ -31,7 +32,7 @@
       </nav>
     </header>
 
-    <main class="post-main">
+    <main data-aos="fade-up" class="post-main">
       <section class="post-content">
         <img class="thumbnail" src="img/post1.jpg" alt="" />
         <h2 class="headings">Post Title</h2>
@@ -81,6 +82,12 @@
       </section>
       <p>Copyright &copy; Rafamed</p>
     </footer>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 1000,
+      });
+    </script>
     <script src="script.js"></script>
   </body>
 </html>
