@@ -24,6 +24,11 @@ header {
   background-color: var(--secondary-color);
 }
 
+.blob {
+  width: 40rem;
+  height: 40rem;
+}
+
 /*
 -----------------------------
 Navigation Bar
@@ -62,6 +67,10 @@ Hero Section
 
 .hero {
   margin-top: 8rem;
+}
+
+.hero img {
+  height: 80%;
 }
 
 /*
