@@ -91,6 +91,10 @@ Main Section
   grid-template-columns: repeat(3, 1fr);
 }
 
+.projects div {
+  grid-template-columns: 1fr 1fr;
+}
+
 .project-card {
   width: 50rem;
 }
@@ -111,13 +115,18 @@ Contact Section & Page
   width: 100%;
 }
 
+.contact-content .blob {
+  width: 30rem;
+  height: 30rem;
+}
+
 footer {
   margin-bottom: 1rem;
 }
 
 /*
 ================
-Projects page  styles
+Projects page styles
 ================
 */
 

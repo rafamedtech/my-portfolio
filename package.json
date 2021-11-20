@@ -1,0 +1,23 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "script.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafamedtech/my-portfolio.git"
+  },
+  "keywords": [],
+  "author": "Rafael Valenzuela <rafamed.tech@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rafamedtech/my-portfolio/issues"
+  },
+  "homepage": "https://github.com/rafamedtech/my-portfolio#readme",
+  "dependencies": {
+    "@supabase/supabase-js": "^1.28.0"
+  }
+}
