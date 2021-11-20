@@ -59,7 +59,8 @@ a {
 }
 
 p,
-label {
+label,
+span {
   font-size: 1.6rem;
   color: var(--third-color);
 }
