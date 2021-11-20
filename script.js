@@ -1,3 +1,5 @@
+// Supabase setup
+
 const darkModeBtn = document.getElementById('btn');
 const darkModeItem = document.querySelector('.button-item');
 

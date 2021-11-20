@@ -38,13 +38,13 @@
         <article class="contact-content">
           <figure class="blob"><img src="img/contact.svg" alt="Contact image" /></figure>
 
-          <form class="neumorphism">
+          <form id="contact-form" class="neumorphism">
             <label for="name">Full Name</label>
-            <input type="text" id="name" />
+            <input name="name" type="text" id="name" required />
             <label for="email">Email</label>
-            <input type="email" id="email" />
+            <input name="email" type="email" id="email" required />
             <label for="message">Your Message</label>
-            <textarea id="message"></textarea>
+            <textarea name="message" id="message" required></textarea>
 
             <input class="btn cta form" type="submit" value="Submit" />
           </form>
@@ -71,5 +71,38 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="https://unpkg.com/@supabase/supabase-js"></script>
+    <script>
+      const { createClient } = supabase;
+      supabase = createClient(
+        'https://atvjxufozpfeqjlzwznr.supabase.co',
+        'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYW5vbiIsImlhdCI6MTYzNjU4ODMwMywiZXhwIjoxOTUyMTY0MzAzfQ.2ZRCh748peT1TNrI_P_at51gncwrdQHwvzitKh05f0s'
+      );
+
+      const form = document.forms['contact-form'];
+
+      form.addEventListener('submit', async (event) => {
+        event.preventDefault();
+
+        const formName = document.getElementById('name');
+        const formEmail = document.getElementById('email');
+        const formMessage = document.getElementById('message');
+
+        let submision = {
+          name: formName.value,
+          email: formEmail.value,
+          message: formMessage.value,
+        };
+
+        const { error, data } = await supabase.from('messages').insert([submision]);
+
+        console.log(submision);
+
+        formName.value = '';
+        formEmail.value = '';
+        formMessage.value = '';
+      });
+    </script>
+    <!-- <script src="supabase.js"></script> -->
   </body>
 </html>

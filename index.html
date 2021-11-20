@@ -110,18 +110,18 @@
       <section class="projects">
         <h2 class="headings">Here is some of my work</h2>
         <div>
-          <article class="neumorphism project-card">
+          <a href="/" class="neumorphism project-card">
             <img src="img/projects/render.jpg" alt="Render" />
-          </article>
-          <article class="neumorphism project-card">
+          </a>
+          <a href="/" class="neumorphism project-card">
             <img src="img/projects/simpletodo.jpg" alt="Simple Todo" />
-          </article>
-          <article class="neumorphism project-card">
+          </a>
+          <a href="/" class="neumorphism project-card">
             <img src="img/projects/github-profile.jpg" alt="Github Profile Search" />
-          </article>
-          <article class="neumorphism project-card">
+          </a>
+          <a href="/" class="neumorphism project-card">
             <img src="img/projects/devsearch.PNG" alt="DevSearch" />
-          </article>
+          </a>
         </div>
         <div class="project-links">
           <a href="projects.html">See more...</a>
@@ -137,13 +137,13 @@
             <img src="img/contact.svg" alt="Contact image" />
           </figure>
 
-          <form class="neumorphism">
+          <form id="contact-form" class="neumorphism">
             <label for="name">Full Name</label>
-            <input type="text" id="name" />
+            <input type="text" id="name" required />
             <label for="email">Email</label>
-            <input type="email" id="email" />
+            <input type="email" id="email" required />
             <label for="message">Your Message</label>
-            <textarea id="message"></textarea>
+            <textarea id="message" required></textarea>
 
             <input class="btn cta form" type="submit" value="Submit" />
           </form>
@@ -171,5 +171,6 @@
     </footer>
 
     <script src="script.js"></script>
+    <script src="supabase.js"></script>
   </body>
 </html>
